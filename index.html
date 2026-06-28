@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Md Musa Haque | Data Analyst</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <style>
+    /* ── EASY TO EDIT: change colors and fonts here ── */
+    :root {
+      --navy:   #1a2744;
+      --gold:   #c8a96e;
+      --light:  #f5f4f0;
+      --text:   #2d2d2d;
+      --muted:  #6b6b6b;
+      --white:  #ffffff;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--light);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    /* ── HEADER ── */
+    header {
+      background: var(--navy);
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+      padding: 4rem 6rem;
+    }
+
+    header img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid var(--gold);
+      flex-shrink: 0;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.6rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    header h2 {
+      font-size: 1rem;
+      font-weight: 300;
+      color: var(--gold);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin: 0.4rem 0 1.2rem;
+    }
+
+    .contact-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 1.5rem;
+      font-size: 0.88rem;
+      color: #b0bcd4;
+    }
+
+    .contact-links a {
+      color: #b0bcd4;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .contact-links a:hover { color: var(--gold); }
+
+    /* ── MAIN LAYOUT ── */
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 3rem 2rem 5rem;
+    }
+
+    /* ── SECTION ── */
+    section { margin-bottom: 3rem; }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      color: var(--navy);
+      border-bottom: 2px solid var(--gold);
+      padding-bottom: 0.4rem;
+      margin-bottom: 1.4rem;
+      letter-spacing: 0.3px;
+    }
+
+    /* ── SUMMARY ── */
+    .summary p { color: var(--muted); font-size: 0.97rem; }
+
+    /* ── SKILLS ── */
+    .skills-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .skill-tag {
+      background: var(--navy);
+      color: var(--white);
+      padding: 0.3rem 0.9rem;
+      border-radius: 2px;
+      font-size: 0.82rem;
+      letter-spacing: 0.5px;
+    }
+
+    /* ── EXPERIENCE & EDUCATION ── */
+    .entry { margin-bottom: 1.8rem; }
+
+    .entry-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 0.3rem;
+    }
+
+    .entry-title {
+      font-weight: 600;
+      font-size: 1rem;
+      color: var(--navy);
+    }
+
+    .entry-date {
+      font-size: 0.82rem;
+      color: var(--gold);
+      font-weight: 500;
+      white-space: nowrap;
+    }
+
+    .entry-sub {
+      font-size: 0.88rem;
+      color: var(--muted);
+      margin-bottom: 0.6rem;
+      font-style: italic;
+    }
+
+    .entry ul {
+      padding-left: 1.2rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .entry ul li { margin-bottom: 0.3rem; }
+
+    /* ── AWARDS & CERTS ── */
+    .list-items { list-style: none; padding: 0; }
+    .list-items li {
+      padding: 0.35rem 0;
+      font-size: 0.92rem;
+      color: var(--muted);
+      border-bottom: 1px solid #e4e0d8;
+    }
+    .list-items li:last-child { border-bottom: none; }
+    .list-items li::before {
+      content: "→ ";
+      color: var(--gold);
+      font-weight: 600;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+      border-top: 1px solid #ddd;
+    }
+
+    /* ── CV BUTTON ── */
+    .cv-btn {
+      display: inline-block;
+      margin-top: 1.2rem;
+      padding: 0.5rem 1.4rem;
+      background: var(--gold);
+      color: var(--navy);
+      font-weight: 600;
+      font-size: 0.85rem;
+      text-decoration: none;
+      border-radius: 2px;
+      letter-spacing: 0.5px;
+      transition: opacity 0.2s;
+    }
+    .cv-btn:hover { opacity: 0.85; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 640px) {
+      header { flex-direction: column; padding: 2.5rem 1.5rem; text-align: center; gap: 1.5rem; }
+      header img { width: 120px; height: 120px; }
+      header h1 { font-size: 2rem; }
+      .contact-links { justify-content: center; }
+      .entry-header { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ══ HEADER ══ -->
+  <header>
+    <img src="photo.png" alt="Md Musa Haque"/>
+    <div>
+      <h1>Md Musa Haque</h1>
+      <h2>Data Analyst</h2>
+      <div class="contact-links">
+        <span>📧 <a href="mailto:mmhaque.work@gmail.com">mmhaque.work@gmail.com</a></span>
+        <span>📞 <a href="tel:+12138873098">+1 213-887-3098</a></span>
+        <span>🔗 <a href="https://www.linkedin.com/in/mmhaque-ds/" target="_blank">LinkedIn</a></span>
+        <span>💻 <a href="https://github.com/mmhaque-ds" target="_blank">GitHub</a></span>
+        <span>📚 <a href="https://scholar.google.com/citations?user=C6FZ6VkAAAAJ&hl=en" target="_blank">Google Scholar</a></span>
+      </div>
+      <a href="resume.pdf" download="Md_Musa_Haque_CV.pdf" class="cv-btn">⬇ Download CV</a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ══ SUMMARY ══ -->
+    <section class="summary">
+      <div class="section-title">About</div>
+      <p>Data Analyst with a strong focus on transforming data into actionable insights to drive business decisions. Skilled in SQL, Python, Power BI, Tableau and Excel with experience in dashboards, KPI tracking and analytics solutions. Passionate about data science, machine learning and intelligent systems.</p>
+    </section>
+
+    <!-- ══ SKILLS ══ -->
+    <section>
+      <div class="section-title">Core Skills</div>
+      <div class="skills-grid">
+        <!-- ✏️ Add or remove skills here -->
+        <span class="skill-tag">SQL</span>
+        <span class="skill-tag">Python</span>
+        <span class="skill-tag">Power BI</span>
+        <span class="skill-tag">Tableau</span>
+        <span class="skill-tag">Excel</span>
+        <span class="skill-tag">Machine Learning</span>
+        <span class="skill-tag">Statistics</span>
+        <span class="skill-tag">Data Visualization</span>
+        <span class="skill-tag">EDA</span>
+        <span class="skill-tag">HIPAA Compliance</span>
+      </div>
+    </section>
+
+    <!-- ══ EXPERIENCE ══ -->
+    <section>
+      <div class="section-title">Professional Experience</div>
+
+      <!-- ✏️ Copy one .entry block to add a new job -->
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">Data Analyst</span>
+          <span class="entry-date">Jul 2025 – Present</span>
+        </div>
+        <div class="entry-sub">Taskimpetus Inc. — New Orleans, LA, USA</div>
+        <ul>
+          <li>Analyze healthcare datasets using SQL, Python, and machine learning to generate actionable insights.</li>
+          <li>Build predictive models to support business forecasting and strategic decision-making.</li>
+          <li>Develop interactive Power BI dashboards to monitor KPIs and operational performance.</li>
+          <li>Automate reporting workflows using Python, improving efficiency and reducing manual effort.</li>
+          <li>Ensure compliance with HIPAA and organizational data governance policies.</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">Mechanical Engineer</span>
+          <span class="entry-date">Jul 2022 – Aug 2023</span>
+        </div>
+        <div class="entry-sub">Oushangyuan Process & Equipment Intelligent Co. — Tianjin, China</div>
+        <ul>
+          <li>Design reviews and verification for large-scale mechanical and EPC projects.</li>
+          <li>Developed and validated 2D/3D engineering drawings for client approval.</li>
+          <li>Coordinated with global clients during pre-sale consultation, equipment selection, and process solution development.</li>
+          <li>Gained practical experience with full production line systems and core processing equipment.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ══ EDUCATION ══ -->
+    <section>
+      <div class="section-title">Education</div>
+
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">MBA – Management of Information Systems</span>
+          <span class="entry-date">Sep 2023 – Jul 2025</span>
+        </div>
+        <div class="entry-sub">International American University, Los Angeles, USA</div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">BE – Mechatronics Engineering</span>
+          <span class="entry-date">Sep 2019 – Jul 2023</span>
+        </div>
+        <div class="entry-sub">Hebei University of Technology, Tianjin, China</div>
+      </div>
+    </section>
+
+    <!-- ══ CERTIFICATES & AWARDS ══ -->
+    <section>
+      <div class="section-title">Certificates &amp; Awards</div>
+      <ul class="list-items">
+        <!-- ✏️ Add or remove items here -->
+        <li>Best Paper Award Certificate – IEEE MP Section</li>
+        <li>International Student Assistant Certificate</li>
+        <li>International Student Council Certificate</li>
+        <li>Inter-School Debate Competition Award</li>
+        <li>Excellent Graduation Student Award</li>
+        <li>1st Place in Province</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer>
+    © 2026 Md Musa Haque · Built with plain HTML — easy to edit anytime
+  </footer>
+
+</body>
+</html>
